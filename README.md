@@ -10,6 +10,10 @@ This microservice provide Authentication and Visitor count APIs .
 
 3. The Database used is MONGO DB
 
+# Api is live 
+
+https://pnxkhg.deta.dev/
+
 # Authentication
 
 # To create new user (signup)
