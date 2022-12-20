@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/stat/style.css">
+    <title>Microtask2</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="heading">
+                <h1>Welcome, This microservice is build for MicroTask 2</h1>
+            </div>
+            <div class="card">
+                <h1>ABOUT</h1>
+                <h3>This microservice provide Authentication and Visitor count APIs .</h3>
+                <p>1. The authentication system uses JSON WEB token and hashing of password with salt to provide reliable security.</p>
+                <p>2. The visitor count system is a versatile visit counter with takes host name and record the count of the respective website in the Database</p>
+                <p>3. The Database used is MONGO DB</p>
+            </div>
+          <h1>Visitor count</h1>
+          <span id="count"></span>
+            <div>
+                <h1> Authentication</h1>
+                <div class="card my">
+                    <h3>To create new user (signup)</h3>
+                    <div>
+                        <h4>Method: POST</h4>
+                        <h3>Endpoint: '/api/auth/createUser'</h3>
+                    </div>
+                    <div>
+                        <h4>Body parameter(in JSON)</h4>
+                        <div>
+                            <ul>
+                                <li>name</li>
+                                <li>email</li>
+                                <li>password</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card my">
+                    <div>
+                        <h3>To login in the account</h3>
+                        <div>
+                            <h4>Method: POST</h4>
+                            <h3>Endpoint: '/api/auth/login'</h3>
+                        </div>
+                        <div>
+                            <h4>Body parameter(in JSON)</h4>
+                            <div>
+                                <ul>
+                                    <li>email</li>
+                                    <li>password</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card my">
+                    <div>
+                        <h3>To get the user info</h3>
+                        <div>
+                            <h4>Method: POST</h4>
+                            <h3>Endpoint: '/api/auth/getuser'</h3>
+                        </div>
+                        <div>
+                            <h4>Header parameter</h4>
+                            <div>
+                               <ul>
+                                <li>auth-token</li>
+                               </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card my">
+                    <div>
+                        <h3>To delete the account</h3>
+                        <div>
+                            <h4>Method: DELETE</h4>
+                            <h3>Endpoint: "/api/auth/deleteuser"</h3>
+                        </div>
+                        <div>
+                            <h4>Header parameter</h4>
+                            <div>
+                                <ul>
+                                    <li>auth-token</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card my">
+                    <div>
+                        <h3>To update the account info</h3>
+                        <div>
+                            <h4>Method: PUT</h4>
+                            <h3>Endpoint: '/api/auth/updateuser'</h3>
+                        </div>
+                        <div>
+                            <h4>Header parameter</h4>
+                            <div>
+                               <ul>
+                                <li>auth-token</li>
+                               </ul>
+                            </div>
+                            <h4>Body parameter (in JSON)</h4>
+                            <div>
+                              <ul>
+                                <li>email</li>
+                                <li>name</li>
+                                <li>password</li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+            <div>
+              <h1>Visitor API</h1>
+              <div class="card my">
+                <div>
+                    <h3>To get detail of the count of visitors</h3>
+                    <div>
+                        <h4>Method: POST</h4>
+                        <h3>Endpoint: '/api/vis/info'</h3>
+                    </div>
+                    <div>
+                        
+                        <h4>Body parameter (in JSON)</h4>
+                        <div>
+                          <ul>
+                            <li>host</li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <div class="card my">
+                    <div>
+                        <h3>To count the visitors</h3>
+                        <div>
+                            <h4>Method: POST</h4>
+                            <h3>Endpoint: '/api/vis/count'</h3>
+                        </div>
+                        <div>
+                            
+                            <h4>Body parameter (in JSON)</h4>
+                            <div>
+                              <ul>
+                                <li>host</li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card my">
+                    <div>
+                        <h3>To reset the Visiter counter</h3>
+                        <div>
+                            <h4>Method: PUT</h4>
+                            <h3>Endpoint: '/api/vis/reset'</h3>
+                        </div>
+                        <div>
+                            
+                            <h4>Body parameter (in JSON)</h4>
+                            <div>
+                              <ul>
+                                <li>host</li>
+                              
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card my">
+                    <div>
+                        <h3>To delete the visitor counter</h3>
+                        <div>
+                            <h4>Method: DELETE</h4>
+                            <h3>Endpoint: '/api/vis/delete'</h3>
+                        </div>
+                        <div>
+                           
+                            <h4>Body parameter (in JSON)</h4>
+                            <div>
+                              <ul>
+                                <li>host</li>
+                               
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <!-- <script src="/public/stat/script.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js" integrity="sha512-zJYu9ICC+mWF3+dJ4QC34N9RA0OVS1XtPbnf6oXlvGrLGNB8egsEzu/5wgG90I61hOOKvcywoLzwNmPqGAdATA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+      
+
+  
+    </script>
+    <script>
+       async function handleRequest() {
+          
+  const url='https://pnxkhg.deta.dev/api/vis/count';
+          const res= await  axios.post(url, {host: window.location.origin})
+          const response=res.data;
+            const result=response.detail.visitors;
+                console.log(result)
+            document.getElementById('count').innerHTML=result;
+        }
+        window.addEventListener('load',handleRequest)
+     </script>   
+</body>
+</html>
