@@ -15,7 +15,7 @@ app.get('/',async(req,res)=>{
 
 app.use('/api/auth',require('./users/auth'));
 app.use('/api/vis',require('./users/visitor'))
-// app.listen(port, () => {
-//   console.log(`server listening at http://localhost:${port}`)
-// })
-module.exports=app;
+app.listen(port, () => {
+  console.log(`server listening at http://localhost:${port}`)
+})
+// module.exports=app;
