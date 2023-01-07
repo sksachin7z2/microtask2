@@ -27,6 +27,18 @@ Body parameter(in JSON)
 2. email
 3. password
 
+# Example
+
+{
+
+"name" : "sachin",
+
+"email" : "abctest@gmail.com",
+
+"password" : "thisisapassword123"
+
+}
+
 # To login in the account
 
 Method: POST
